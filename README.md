@@ -1,4 +1,4 @@
-# Random Message Generator
+# Video game name generator
 ## Portfolio project
 
 Project using:

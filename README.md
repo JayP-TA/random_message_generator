@@ -1,4 +1,6 @@
-# random_message_generator
+# Random Message Generator
 ## Portfolio project
 
-Project using Javascript and Git version control
+Project using:
+*Javascript
+*Git version control

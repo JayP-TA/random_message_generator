@@ -9,18 +9,21 @@ const sequels = ["","2","3","4","II","IV","V","VI","VII","VIII","X","XL","XXL"];
 const subtitles = ["","Revenge","Reforged","Remastered","Return","Legendary Edition","Game of the Year Edition"]
 
 //Capitalize function
-//PEnding
+const capitalize = (s) => {
+     if (typeof s !== 'string') return ''
+     return s.charAt(0).toUpperCase() + s.slice(1)
+}
 //Randomizer functions for each element
 const generateRandomAdjective = () => {
     randomIndex = Math.floor(Math.random() * adjectives.length);
     const adjective = adjectives[randomIndex];
-    return adjective;
+    return capitalize(adjective);
 }
 
 const generateRandomSubject = () => {
     randomIndex = Math.floor(Math.random() * subjects.length);
     const subject = subjects[randomIndex];
-    return subject;
+    return capitalize(subject);
 }
 
 const generateRandomSequel = () => {
@@ -32,7 +35,7 @@ const generateRandomSequel = () => {
 const generateRandomSubtitle = () => {
     randomIndex = Math.floor(Math.random() * subtitles.length);
     const subtitle = subtitles[randomIndex];
-    return subtitle;
+    return capitalize(subtitle);
 }
 
 //Joining function

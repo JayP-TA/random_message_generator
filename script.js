@@ -19,33 +19,12 @@ const randomElements = (elements) => {
     return Math.floor(Math.random() * elements.length)
 }
 
-//Function for each element
-const generateRandomAdjective = () => {
-    const adjective = adjectives[randomElements(adjectives)];
-    return capitalize(adjective);
-}
-
-const generateRandomSubject = () => {
-    const subject = subjects[randomElements(subjects)];
-    return capitalize(subject);
-}
-
-const generateRandomSequel = () => {
-    const sequel = sequels[randomElements(sequels)];
-    return sequel;
-}
-
-const generateRandomSubtitle = () => {
-    const subtitle = subtitles[randomElements(subtitles)];
-    return capitalize(subtitle);
-}
-
 //Joining function
 const generateVideoGameTitle = () => {
-    const adjective = generateRandomAdjective();
-    const subject = generateRandomSubject();
-    const sequel = generateRandomSequel();
-    const subtitle = generateRandomSubtitle();
+    const adjective = capitalize(adjectives[randomElements(adjectives)]);
+    const subject = capitalize(subjects[randomElements(subjects)]);
+    const sequel = sequels[randomElements(sequels)];
+    const subtitle = capitalize(subtitles[randomElements(subtitles)]);
     let videoGameTitle = `${adjective} ${subject} ${sequel}: ${subtitle}`
     if (subtitle == "") {
         videoGameTitle = `${adjective} ${subject} ${sequel}`

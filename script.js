@@ -44,7 +44,10 @@ const generateVideoGameTitle = () => {
     const subject = generateRandomSubject();
     const sequel = generateRandomSequel();
     const subtitle = generateRandomSubtitle();
-    const videoGameTitle = `${adjective} ${subject} ${sequel}: ${subtitle}`
+    let videoGameTitle = `${adjective} ${subject} ${sequel}: ${subtitle}`
+    if (subtitle == "") {
+        videoGameTitle = `${adjective} ${subject} ${sequel}`
+    }
     return videoGameTitle;
 }
 

@@ -13,28 +13,30 @@ const capitalize = (s) => {
      if (typeof s !== 'string') return ''
      return s.charAt(0).toUpperCase() + s.slice(1)
 }
-//Randomizer functions for each element
+
+//Randomizer function
+const randomElements = (elements) => {
+    return Math.floor(Math.random() * elements.length)
+}
+
+//Function for each element
 const generateRandomAdjective = () => {
-    randomIndex = Math.floor(Math.random() * adjectives.length);
-    const adjective = adjectives[randomIndex];
+    const adjective = adjectives[randomElements(adjectives)];
     return capitalize(adjective);
 }
 
 const generateRandomSubject = () => {
-    randomIndex = Math.floor(Math.random() * subjects.length);
-    const subject = subjects[randomIndex];
+    const subject = subjects[randomElements(subjects)];
     return capitalize(subject);
 }
 
 const generateRandomSequel = () => {
-    randomIndex = Math.floor(Math.random() * sequels.length);
-    const sequel = sequels[randomIndex];
+    const sequel = sequels[randomElements(sequels)];
     return sequel;
 }
 
 const generateRandomSubtitle = () => {
-    randomIndex = Math.floor(Math.random() * subtitles.length);
-    const subtitle = subtitles[randomIndex];
+    const subtitle = subtitles[randomElements(subtitles)];
     return capitalize(subtitle);
 }
 

@@ -1,5 +1,7 @@
 # Video game name generator
 ## Portfolio project
+By Juan Pablo Torres
+
 Generates a random video game name like:
   * Delightful Tug-of-war VI: Game of the Year Edition
   * Bright War XXL: Legendary Edition
@@ -14,3 +16,4 @@ Project using:
 
   + Javascript
   + Git version control
+
